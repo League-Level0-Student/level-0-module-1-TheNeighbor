@@ -15,19 +15,21 @@ public class TheRiddler {
 		String answer1 = JOptionPane.showInputDialog("I'm tall when I'm young and I'm short when I'm old. What am I?");
 		// 4. If they got the answer right, pop up "correct!" and increase the score by
 		// one
-		if (answer1.equalsIgnoreCase("A Candle")) {
+		if (answer1.toLowerCase().contains("candle")) {
 			score++;
 			JOptionPane.showMessageDialog(null, "Correct!");
 		} else {
 			JOptionPane.showMessageDialog(null, "WRONG! The answer is: A Candle");
 		}
-		JOptionPane.showInputDialog("You are a prisoner in a room with 2 doors and 2 guards.\n"
-				+ "One of the doors will guide you to freedom and behind the other is a death trap and you don’t know which is which.\n"
-				+ "One of the guards always tells the truth and the other always lies.\n"
-				+ "You don’t know which one is the truth teller or the the liar either.\n"
-				+ "You have to choose and open one of these doors, but you can only ask a single question to one of the guards.\n"
-				+ "What do you ask so you can pick the door to freedom?\n");
-
+		String answer2 = JOptionPane.showInputDialog("There was a husband named Joe and a wife named Mary.\n"
+				+ "At nightime, Joe was watching TV and Mary was reading a book.\n"
+				+ "All of a sudden, the power went out and Joe went to bed, but Mary kept on reading. How is this possible?");
+		if (answer2.toLowerCase().contains("mary is blind")) {
+			score++;
+			JOptionPane.showMessageDialog(null, "Correct!");
+		} else {
+			JOptionPane.showMessageDialog(null, "WRONG! The answer is: Mary is blind so she reads brail.");
+		}
 		// 5. Otherwise, say "wrong" and tell them the answer
 
 		// 6. Add some more riddles
