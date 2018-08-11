@@ -16,11 +16,17 @@ public class XGeeks {
 public static void main(String[] args) {
 
 		// 1. Save the superpower for each person in a variable.
-
+		String bryPower = "Bryan's power is writing on a white board.";
+		String tomPower = "Tommy's power is shape shifting.";
 		// 2. Ask the user to enter a name. Store their answer in a variable.
-
+		String name = JOptionPane.showInputDialog("Type in your name.");
 		// 3. Show the superpower in a pop-up, depending on the name entered. 
-
+		if(name.equalsIgnoreCase("Bryan")) {
+			JOptionPane.showMessageDialog(null, bryPower);
+		}
+		if(name.equalsIgnoreCase("Tommy")) {
+			JOptionPane.showMessageDialog(null, tomPower);
+		}
 	}
 }
 

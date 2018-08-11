@@ -30,10 +30,11 @@ public class SecretMessageBox {
 				"Tell your friend that if he/she guesses the right password, the secret message will pop up.");
 		String guessP = JOptionPane.showInputDialog("Guess the password.");
 		while (!guessP.equals(password)) {
-
+			JOptionPane.showMessageDialog(null, "INTRUDER!!!");
+			guessP = JOptionPane.showInputDialog("Guess the password.");
 		}
 		// 4. If their guess matches the password, show them the secret message
-
+		JOptionPane.showMessageDialog(null, message);
 		// 5. If the password does not match, pop-up "INTRUDER!!"
 	}
 
